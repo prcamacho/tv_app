@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TV en familia · Administración</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header><div><strong>TV en familia</strong><span>Panel de adultos</span></div><button id="logout" type="button" hidden>Salir</button></header>
+  <main>
+    <p id="status" role="status" aria-live="polite"></p>
+    <section id="login" class="panel">
+      <h1>Ingresar</h1>
+      <p>Usá la cuenta de adulto creada para este proyecto.</p>
+      <form id="loginForm">
+        <label>Correo electrónico<input id="email" type="email" autocomplete="username" required></label>
+        <label>Contraseña<input id="password" type="password" autocomplete="current-password" required></label>
+        <button type="submit">Entrar</button>
+      </form>
+    </section>
+    <div id="editor" hidden>
+      <div class="intro"><h1>Contenido de la TV</h1><p>Los cambios aparecen en la TV con conexión, sin reinstalarla.</p></div>
+      <section class="panel">
+        <div class="sectionTitle"><h2>Videos familiares</h2><span>MP4 · hasta 500 MB</span></div>
+        <div id="videos"></div>
+        <button id="addVideo" type="button" class="secondary">Agregar video</button>
+      </section>
+      <section class="panel">
+        <div class="sectionTitle"><h2>Rutinas visuales</h2><span>Una imagen y una instrucción por paso</span></div>
+        <div id="routines"></div>
+        <button id="addRoutine" type="button" class="secondary">Agregar rutina</button>
+      </section>
+      <div class="savebar"><span>Guardá después de hacer cambios.</span><button id="save" type="button">Guardar cambios</button></div>
+    </div>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
